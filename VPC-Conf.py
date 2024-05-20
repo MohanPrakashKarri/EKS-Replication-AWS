@@ -172,8 +172,8 @@ def replicate_vpc_configuration(source_region, target_region, vpc_id):
     }
 if __name__ == "__main__":
     try:
-        source_region = input("Enter the source region: ")
-        target_region = input("Enter the target region: ")
+        source_region = "us-east-1"
+        target_region = "us-west-1"
         ec2_client_source = boto3.client('ec2', region_name=source_region)
         vpcs = get_vpcs(ec2_client_source)
         if not vpcs:
